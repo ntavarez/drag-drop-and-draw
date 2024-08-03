@@ -9,3 +9,5 @@ None of this would be possible without control variables, both for the program t
 It was really cool to be challenged in this way, especially in Javascript, a language I've never had the opportunity to work with. Being able to show that an action so simple for the user hides a code that is not this simple as the action itself. For me, it was a great opportunity to delve deeper, with the obligation to use the language purely, without using libraries, etc. This is because we end up learning more than what is proposed in the challenge, since the research work consists of finding solutions and we see a lot of useful things out there, many ways of doing the same thing and other things (sometimes not so related to the challenge, but that can be useful for future other codes).
 
 At the end, it was a great experience and I would say that a new world opens up with each search.
+
+![](https://github.com/drag-drop-and-draw/gif_ddd.gif)
