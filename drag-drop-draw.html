@@ -55,6 +55,24 @@
         
         let startDiv, endDiv, clickTimeout;
         let isDragging = false;
+
+        divs.forEach((div) => {
+            div.addEventListener('click', (event) => {
+                if(!isDragging) singleClickHandler(div);
+            });
+    
+            div.addEventListener('dblclick', (event) => {
+                if(!isDragging) doubleClickHandler(div);
+            });
+    
+            div.addEventListener('dragstart', (event) => {
+                event.preventDefault();
+            });
+    
+            div.addEventListener('mousedown', (event) => {
+                if(!isDragging) dragAndDrop(event, div);
+            });
+        });
     
         function dragAndDrop(event, element) {
             event.preventDefault();
