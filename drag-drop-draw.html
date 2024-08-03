@@ -53,6 +53,7 @@
         const canvasLine = document.getElementById("line");
         const context = canvasLine.getContext("2d");
         
+        let startDiv, endDiv, clickTimeout;
         let isDragging = false;
     
         function dragAndDrop(event, element) {
@@ -81,6 +82,17 @@
     
             isDragging = true;
         }
+
+        function singleClickHandler(element) {
+            clearTimeout(clickTimeout);
+    
+            clickTimeout = setTimeout(() => {
+                if (startDiv !== element) {
+                    endDiv = element;
+                    drawLine();
+                }
+            }, 300);
+        }    
     </script>
 </body>
 </html>
