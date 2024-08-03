@@ -100,6 +100,22 @@
             startDiv = element;
             endDiv = null;
         }
+
+        function drawLine() {
+            context.clearRect(0, 0, canvasLine.width, canvasLine.height);
+    
+            if (startDiv && endDiv){
+                let x1 = startDiv.offsetLeft + startDiv.offsetWidth / 2;
+                let y1 = startDiv.offsetTop + startDiv.offsetHeight / 2;
+                let x2 = endDiv.offsetLeft + endDiv.offsetWidth / 2;
+                let y2 = endDiv.offsetTop + endDiv.offsetHeight / 2;
+          
+                context.beginPath();
+                context.moveTo(x1, y1);
+                context.lineTo(x2, y2);
+                context.stroke();
+            }
+        }
     </script>
 </body>
 </html>
