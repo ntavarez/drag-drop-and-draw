@@ -46,5 +46,41 @@
 
         <canvas id="line" width="500" height="300"></canvas>
     </div>
+
+    <script>
+        const divs = document.querySelectorAll(".draggable");
+    
+        const canvasLine = document.getElementById("line");
+        const context = canvasLine.getContext("2d");
+        
+        let isDragging = false;
+    
+        function dragAndDrop(event, element) {
+            event.preventDefault();
+    
+            let posX = event.clientX - element.getBoundingClientRect().left;
+            let posY = event.clientY - element.getBoundingClientRect().top;
+    
+            function moveAt(clientX, clientY) {
+                element.style.left = clientX - posX + "px";
+                element.style.top = clientY - posY + "px";
+                drawLine();
+            }
+    
+            function onMouseMove(event) {
+                moveAt(event.clientX, event.clientY);
+            }
+    
+            document.addEventListener('mousemove', onMouseMove);
+    
+            element.onmouseup = function() {
+                document.removeEventListener('mousemove', onMouseMove);
+                element.onmouseup = null;
+                isDragging = false;
+            };
+    
+            isDragging = true;
+        }
+    </script>
 </body>
 </html>
