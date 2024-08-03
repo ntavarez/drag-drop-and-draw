@@ -92,7 +92,14 @@
                     drawLine();
                 }
             }, 300);
-        }    
+        }
+
+        function doubleClickHandler(element) {
+            clearTimeout(clickTimeout);
+    
+            startDiv = element;
+            endDiv = null;
+        }
     </script>
 </body>
 </html>
