@@ -10,4 +10,4 @@ It was really cool to be challenged in this way, especially in Javascript, a lan
 
 At the end, it was a great experience and I would say that a new world opens up with each search.
 
-![](https://github.com/ntavarez/drag-drop-and-draw/gif_ddd.gif)
+![](https://github.com/ntavarez/drag-drop-and-draw/gif_ddd.gif](https://github.com/ntavarez/drag-drop-and-draw/blob/main/gif_ddd.gif)
