@@ -4,6 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>drag, drop and draw</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+        }
+        #canvas {
+            width: 500px;
+            height: 300px;
+            border: 2px solid #ccc;
+            margin: 20px 20px;
+            position: relative;
+            overflow: hidden;
+        }
+        .draggable {
+            width: 100px;
+            height: 100px;
+            color: white;
+            text-align: center;
+            line-height: 100px;
+            position: absolute;
+            cursor: grab;
+        }
+        .blue {
+            background-color: #3498db;
+        }
+        .green {
+            background-color: #2ecc71;
+        }
+        #line {
+            position: absolute;
+            pointer-events: none; /* don't allow any intervention of the drawn line in the mouse events*/
+        }   
+    </style>
 </head>
 <body>    
     <div id="canvas" style>
